@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/dx.common.css" rel="stylesheet" />
+    <link href="Content/dx.light.css" rel="stylesheet" />
+    <link href="App/app.css" rel="stylesheet" />
+</head>
+<body ng-app="portalApp" ng-controller="summaryController">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/Summary">Operations Portal</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{ active: isActive('/Summary') }">
+                        <a href="#/Summary">Summary</a>
+                    </li>
+                    <li ng-class="{ active: isActive('/Production') }">
+                        <a href="#/Production">Production</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div ng-view class="jumbotron">
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.11.3.min.js"></script>
+    <script src="Scripts/jquery.globalize/globalize.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <script src="Scripts/dx.webappjs.js"></script>
+    <script src="Scripts/dx.chartjs.js"></script>
+
+    <!--application scripts-->
+    <script src="App/app.js"></script>
+    <script src="App/Views/productionController.js"></script>
+    <script src="App/Views/summaryController.js"></script>
+    <script src="App/Services/dataService.js"></script>
+
+</body>
+</html>
